@@ -5,6 +5,7 @@ import { createClient } from '@vercel/postgres';
 const connectionString =
   process.env.POSTGRES_URL || process.env.POSTGRES_URL_NON_POOLING;
 
+console.log('ENV DEBUG', process.env);
 if (!connectionString) {
   throw new Error('Database connection string not found in env');
 }

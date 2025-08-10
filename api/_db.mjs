@@ -11,5 +11,4 @@ if (!connectionString) {
 }
 
 export const pool = createPool({ connectionString });
-// даём тот же интерфейс, что и раньше
 export const sql = pool.sql.bind(pool);
